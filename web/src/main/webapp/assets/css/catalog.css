@@ -1,0 +1,303 @@
+li {
+    list-style-type: none;
+}
+
+.left-menu a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: -15px;
+    margin-top: 25px;
+    display: block;
+    width: 200px;
+    height: 13px;
+}
+
+.left-menu a:hover {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: -15px;
+    margin-top: 25px;
+    display: block;
+    width: 200px;
+    height: 13px;
+}
+
+.left-menu h3 a {
+    font-size: 16px;
+    font-family: "Comfortaa";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    width: 69px;
+    height: 14px;
+}
+
+.left-menu h3 a:hover {
+    font-size: 16px;
+    font-family: "Comfortaa";
+    color: rgb(244, 201, 65);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    width: 69px;
+    height: 14px;
+}
+
+.left-menu {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    position: relative;
+    left: 20px;
+    top: 40px;
+    width: 294px;
+    height: 180px;
+}
+
+.line-main {
+    background-color: rgb(244, 201, 65);
+    position: absolute;
+    top: 35px;
+    width: 920px;
+    height: 1px;
+
+}
+
+.sort-ul li {
+    position: relative;
+    display: inline;
+    left: 65px;
+    margin-right: 25px;
+    width: 38px;
+    height: 12px;
+    top: -7px;
+}
+
+.limit-ul li {
+    position: relative;
+    display: inline;
+    left: 540px;
+    margin-right: 10px;
+    width: 38px;
+    height: 12px;
+    top: -7px;
+}
+
+.limit-ul li a {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.sort-ul li a {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+
+}
+
+.limit-ul li a:hover {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.sort-ul li a:hover {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+
+}
+
+.sort {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    width: 97px;
+    height: 12px;
+
+}
+
+.limit {
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 750px;
+    width: 90px;
+    height: 9px;
+}
+
+.main-header {
+    position: relative;
+    display: inline-flex;
+    left: 335px;
+    top: -140px;
+    width: 920px;
+    height: 12px;
+
+}
+
+.product {
+    position: relative;
+    display: inline-block;
+    left: 310px;
+    top: -110px;
+    columns: 3;
+
+
+}
+
+.product-box-s {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3.96px 0.04px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 35px;
+    top: 10px;
+    width: 288px;
+    height: 327px;
+
+}
+
+.product-box-s img {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 240px;
+    height: 190px;
+
+}
+
+.product-box-s h3 a {
+    font-size: 18px;
+    font-family: "Comfortaa";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 157px;
+    height: 20px;
+
+}
+
+.product-box-s .price {
+    font-size: 26px;
+    font-family: "Comfortaa";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    top: 0px;
+    width: 100px;
+    height: 35px;
+
+}
+
+.product-box-s .old-price {
+    font-size: 18px;
+    font-family: "Comfortaa";
+    color: rgba(0, 0, 0, 0.502);
+    text-decoration: line-through;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    top: 235px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.product-box-s .buy span {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 25px;
+    top: 13px;
+    width: 70px;
+    height: 12px;
+
+}
+
+
+.product-box-s .buy {
+    border-radius: 4px;
+    background-color: rgb(219, 157, 57);
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    width: 116px;
+    height: 42px;
+
+}
+
+
+.pagination {
+    position: relative;
+    left: 335px;
+    top: -110px;
+    width: 920px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pagination li {
+    position: relative;
+    display: inline;
+    margin-right: 5px;
+}
+
+.pagination li a {
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.pagination li a:hover {
+    color: rgb(219, 157, 57);
+}
+

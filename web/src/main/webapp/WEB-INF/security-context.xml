@@ -1,0 +1,36 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans.xsd
+             http://www.springframework.org/schema/security
+             http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/" access="permitAll"/>
+        <intercept-url pattern="/catalog" access="permitAll"/>
+        <intercept-url pattern="/registration" access="permitAll"/>
+        <intercept-url pattern="/product" access="hasAnyRole('USER', 'ADMIN')"/>
+        <intercept-url pattern="/shoppingbasket" access="hasAnyRole('USER', 'ADMIN')"/>
+        <intercept-url pattern="/orders" access="hasAnyRole('USER', 'ADMIN')"/>
+        <intercept-url pattern="/item" access="hasAnyRole('USER', 'ADMIN')"/>
+        <intercept-url pattern="/admin**" access="hasRole('ADMIN')"/>
+        <form-login login-page="/login"
+                    username-parameter="email"
+                    password-parameter="password"
+                    authentication-failure-url="/login"/>
+        <csrf disabled="true"/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="authService">
+            <password-encoder hash="bcrypt"/>
+        </authentication-provider>
+
+
+    </authentication-manager>
+
+    <beans:bean id="authService" class="web.filters.AuthenticationFilter"/>
+
+</beans:beans>
+

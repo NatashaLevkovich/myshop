@@ -1,0 +1,593 @@
+
+.promo1 {
+    position: relative;
+    top: -25px;
+    left: 0px;
+    width: 1280px;
+    height: 500px;
+    background-image: url(../image/janko-ferlic-478394-unsplash.png);
+}
+
+.promo1 .text {
+    position: absolute;
+    top: 60px;
+    left: 82px;
+}
+
+.promo1 .text .span1 {
+    width: 1118px;
+    height: 38px;
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Comfortaa - Bold";
+    font-weight: 700;
+
+}
+
+.promo1 .text .span2 {
+    width: 1118px;
+    height: 38px;
+    color: #f4c941;
+    font-family: "Comfortaa - Bold";
+    font-size: 36px;
+    font-weight: 400;
+    font-weight: 700;
+}
+
+.promo1 .text .span3 {
+    width: 1118px;
+    height: 38px;
+    color: #ffffff;
+    font-family: "Comfortaa - Regular";
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.promo1 .v_cat {
+    width: 152px;
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid rgba(219, 157, 57, 0.8);
+    background-color: #db9d39;
+    position: absolute;
+    left: 561px;
+    top: 155px;
+    z-index: 6;
+}
+
+.promo1 .v_cat a {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    position: absolute;
+    left: 23px;
+    top: 13px;
+    width: 117px;
+    height: 12px;
+    z-index: 7;
+}
+
+.popular-category{
+    position: relative;
+    width: 1280px;
+    height: 400px;
+}
+
+.pop_cat {
+    background-color: #f4c941;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    left: 25px;
+    top: 4px;
+    width: 344px;
+    height: 55px;
+    z-index: 93;
+}
+
+.pop_cat span {
+    font-size: 27px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 300px;
+    height: 27px;
+    z-index: 95;
+}
+
+.line1 {
+    background-color: rgb(244, 201, 65);
+    position: absolute;
+    left: 25px;
+    top: 79px;
+    width: 1260px;
+    height: 1px;
+    z-index: 11;
+}
+
+.pop1 {
+    background-image: url(../image/rebenok129.png);
+    opacity: 0.6;
+    position: absolute;
+    left: 26px;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    z-index: 14;
+}
+
+.pop2 {
+    background-image: url(../image/bb_outwear_2.png);
+    opacity: 0.6;
+    position: absolute;
+    left: 336px;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    z-index: 17;
+}
+
+.pop3 {
+    background-image: url(../image/119671921_5751420_zh.png);
+    opacity: 0.6;
+    position: absolute;
+    left: 646px;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    z-index: 20;
+}
+
+.pop4 {
+    background-image: url(../image/Слой_1.png);
+    opacity: 0.6;
+    position: absolute;
+    left: 955px;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    z-index: 23;
+}
+
+.pop1 a {
+
+    font-size: 20px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 140px;
+    width: 217px;
+    height: 60px;
+    z-index: 15;
+}
+
+.pop2 a {
+    font-size: 20px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 140px;
+    width: 250px;
+    height: 18px;
+    z-index: 18;
+}
+
+.pop3 a {
+    font-size: 20px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 140px;
+    width: 219px;
+    height: 18px;
+    z-index: 21;
+}
+
+.pop4 a {
+    font-size: 20px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 140px;
+    width: 258px;
+    height: 19px;
+    z-index: 24;
+}
+
+.s_a {
+    background-color: #f4c941;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    left: 25px;
+    top: -74px;
+    width: 120px;
+    height: 55px;
+    z-index: 27;
+}
+
+.s_a span {
+    font-size: 25px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    position: absolute;
+    left: 22px;
+    top: 15px;
+    width: 78px;
+    height: 25px;
+    z-index: 29;
+}
+
+.line2 {
+    background-color: rgb(244, 201, 65);
+    position: absolute;
+    left: 25px;
+    top: 1067px;
+    width: 1260px;
+    height: 1px;
+    z-index: 28;
+}
+
+.sale {
+    position: relative;
+    height: 316px;
+    width: 1280px;
+    display: flex;
+}
+
+.product-box-sale {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3.96px 0.04px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 26px;
+    top: -65px;
+    width: 288px;
+    height: 316px;
+    z-index: 31;
+}
+
+.product-box-sale img {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 240px;
+    height: 190px;
+    z-index: 10;
+}
+
+.product-box-sale h3 a {
+    font-size: 18px;
+    font-family: "Comfortaa";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 157px;
+    height: 20px;
+    z-index: 33;
+}
+
+.product-box-sale .price {
+    font-size: 26px;
+    font-family: "Comfortaa";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    top: 0px;
+    width: 100px;
+    height: 35px;
+    z-index: 60;
+}
+
+.product-box-sale .old-price {
+    font-size: 18px;
+    font-family: "Comfortaa";
+    color: rgba(0, 0, 0, 0.502);
+    text-decoration: line-through;
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 100px;
+    top: -57px;
+    width: 50px;
+    height: 50px;
+    z-index: 35;
+}
+
+.product-box-sale .buy {
+    border-radius: 4px;
+    background-color: rgb(219, 157, 57);
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    width: 116px;
+    height: 42px;
+    z-index: 36;
+}
+
+.product-box-sale .buy span {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 25px;
+    top: 13px;
+    width: 70px;
+    height: 12px;
+    z-index: 38;
+}
+
+.product-box-sale .discount{
+    border-radius: 50%;
+    background-color: rgb(250, 145, 122);
+    position: absolute;
+    left: 260px;
+    top: -40px;
+    width: 50px;
+    height: 50px;
+    z-index: 40;
+}
+
+.product-box-sale .discount span{
+    font-size: 12px;
+    font-family: "OpenSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 10px;
+    top: 17px;
+    width: 32px;
+    height: 9px;
+    z-index: 67;
+}
+
+.promo2 {
+    position: relative;
+    top: -25px;
+    left: 0px;
+    width: 1280px;
+    height: 500px;
+    background-image: url(../image/steven-libralon-570406-unsplash.png);
+}
+
+.promo2 .text {
+    position: absolute;
+    top: 60px;
+    left: 82px;
+}
+
+.promo2 .text .span1 {
+    width: 1118px;
+    height: 38px;
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Comfortaa - Bold";
+    font-weight: 700;
+
+}
+
+.promo2 .text .span2 {
+    width: 1118px;
+    height: 38px;
+    color: #f4c941;
+    font-family: "Comfortaa - Bold";
+    font-size: 36px;
+    font-weight: 400;
+    font-weight: 700;
+}
+
+.promo2 .text .span3 {
+    width: 1118px;
+    height: 38px;
+    color: #ffffff;
+    font-family: "Comfortaa - Regular";
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.promo2 .v_cat {
+    width: 152px;
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid rgba(219, 157, 57, 0.8);
+    background-color: #db9d39;
+    position: absolute;
+    left: 561px;
+    top: 155px;
+    z-index: 6;
+}
+
+.promo2 .v_cat a {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    position: absolute;
+    left: 23px;
+    top: 13px;
+    width: 117px;
+    height: 12px;
+    z-index: 7;
+}
+
+.n_p {
+    border-radius: 8px 8px 0 0;
+    background-color: #f4c941;
+    position: relative;
+    left: 25px;
+    top: 14px;
+    width: 301px;
+    height: 55px;
+    z-index: 10;
+}
+
+.n_p span {
+    font-size: 27px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 259px;
+    height: 27px;
+    z-index: 95;
+}
+
+.line3 {
+    background-color: rgb(244, 201, 65);
+    position: absolute;
+    left: 25px;
+    top: 2065px;
+    width: 1260px;
+    height: 1px;
+    z-index: 94;
+}
+
+.new-product {
+    position: relative;
+    height: 316px;
+    width: 1280px;
+    display: flex;
+}
+
+
+
+.product-box {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3.96px 0.04px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 26px;
+    top: 25px;
+    width: 288px;
+    height: 316px;
+    z-index: 31;
+}
+
+.product-box img {
+    background-color: rgba(0, 0, 0, 0.35);
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 240px;
+    height: 190px;
+    z-index: 10;
+}
+
+.product-box h3 a {
+    font-size: 18px;
+    font-family: "Comfortaa";
+    color: rgb(219, 157, 57);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 157px;
+    height: 20px;
+    z-index: 33;
+}
+
+.product-box .price {
+    font-size: 26px;
+    font-family: "Comfortaa";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    left: 25px;
+    top: 0px;
+    width: 100px;
+    height: 35px;
+    z-index: 60;
+}
+
+.product-box  .buy {
+    border-radius: 4px;
+    background-color: rgb(219, 157, 57);
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    width: 116px;
+    height: 42px;
+    z-index: 36;
+}
+
+.product-box  .buy span {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 25px;
+    top: 13px;
+    width: 70px;
+    height: 12px;
+    z-index: 38;
+}
+
+.product-box .new{
+    border-radius: 4px;
+    background-color: rgb(157, 210, 152);
+    position: absolute;
+    left: 240px;
+    top: -25px;
+    width: 62px;
+    height: 32px;
+    z-index: 105;
+}
+
+.product-box  .new span{
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    width: 32px;
+    height: 9px;
+    z-index: 67;
+}
+
