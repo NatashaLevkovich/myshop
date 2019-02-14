@@ -53,7 +53,7 @@ public class ShoppingBasketController {
             Product product = productService.get(item.getProduct().getId());
             Map<Integer, Integer> productSize = product.getSizeAndQuantity();
             for (Map.Entry<Integer, Integer> map : productSize.entrySet()) {
-                if (map.getKey() == item.getProductSize()) {
+                if (map.getKey().equals(item.getProductSize())) {
                     productSize.put(item.getProductSize(), map.getValue() + item.getQuantity());
                 }
             }
