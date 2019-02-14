@@ -4,7 +4,7 @@
 <div class="main">
 
 
-
+    <%--@elvariable id="user" type="entities"--%>
     <s:form id="registration-form" action="${pageContext.request.contextPath}/registration/add" method="post" modelAttribute="user">
         <fieldset>
             <p style="color: red"><c:out value="${errors}"/></p>
