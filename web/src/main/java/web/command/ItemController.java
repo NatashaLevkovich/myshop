@@ -71,7 +71,7 @@ public class ItemController {
             order = orders.get(0);
             List<Item> items = itemService.getItemsByOrder(order);
             for (Item item : items) {
-                if (item.getProduct().getId() == product.getId() && item.getProductSize() == size) {
+                if (item.getProduct().getId().equals(product.getId()) && item.getProductSize().equals(size)) {
                     item.setQuantity(item.getQuantity() + quantity);
                     try {
                         itemService.update(item);
