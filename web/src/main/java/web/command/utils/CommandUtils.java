@@ -1,4 +1,4 @@
-package web.command;
+package web.command.utils;
 
 import entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import services.UserService;
 
 public abstract class CommandUtils {
 
-    static User getUserByAuth(Authentication auth, UserService userService){
+    public static User getUserByAuth(Authentication auth, UserService userService){
         if (auth != null) {
             Object principal = auth.getPrincipal();
             if (principal instanceof UserDetails) {

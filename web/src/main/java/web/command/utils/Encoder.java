@@ -1,4 +1,4 @@
-package web.command;
+package web.command.utils;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 

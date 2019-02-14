@@ -1,4 +1,4 @@
-package web.command;
+package web.command.utils;
 
 
 import org.springframework.web.bind.annotation.ControllerAdvice;

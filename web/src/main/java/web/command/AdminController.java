@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import services.OrderService;
 import services.ProductService;
 import services.UserService;
+import web.command.utils.Encoder;
 
 import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletRequest;

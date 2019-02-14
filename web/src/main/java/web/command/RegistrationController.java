@@ -8,6 +8,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import services.UserService;
+import web.command.utils.Encoder;
+
 import javax.validation.Valid;
 
 
