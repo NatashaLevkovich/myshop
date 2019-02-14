@@ -50,6 +50,7 @@
         </c:forEach>
 
 
+        <%--@elvariable id="redproduct" type="entities"--%>
         <s:form id="redactorproduct" action="${pageContext.request.contextPath}/admin/redactor" method="post"
                 modelAttribute="redproduct">
 
@@ -145,6 +146,7 @@
             </tr>
         </c:forEach>
 
+        <%--@elvariable id="reduser" type="entities"--%>
         <s:form id="setuser" action="${pageContext.request.contextPath}/admin/redactoruser" method="post" modelAttribute="reduser">
             <tr>
                 <td><s:input type="text" name="id" value="${reduser.id}" path="id"/> </td>
@@ -155,9 +157,7 @@
                 <td><s:input type="text" name="lastname" value = "${reduser.lastName}" path="lastName"/></td>
                 <td><s:input type="text" name="address" value = "${reduser.address}" path="address"/></td>
                 <td><s:input type="text" name="phone" value = "${reduser.phoneNumber}" path="phoneNumber"/></td>
-                <td><s:input type="text" name="phone" value = "${reduser.status}" path="status"/>
-                    <%--<s:radiobutton type="text" name="status" value = "ADMIN" path="status"/>ADMIN<br>--%>
-                    <%--<s:radiobutton type="text" name="status" value = "USER" path="status"/>USER<br>--%>
+                <td><s:input type="text" name="phone" value = "${reduser.status}" path="status"/>                
                 </td>
                 <td>
                     <button form="setuser">Редактировать/Добавить</button>
