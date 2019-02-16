@@ -8,13 +8,14 @@
 <div class="main-catalog">
 
     <div class="left-menu">
-        <h3><a href="${pageContext.request.contextPath}/catalog"><fmt:message bundle="${i18n}" key="header.catalog"/></a></h3>
+        <h3><a href="${pageContext.request.contextPath}/catalog"><fmt:message bundle="${i18n}"
+                                                                              key="header.catalog"/></a></h3>
         <ul>
             <li><a href="${pageContext.request.contextPath}/catalog?cat=boys">Одежда для мальчиков</a></li>
             <li><a href="${pageContext.request.contextPath}/catalog?cat=girls">Одежда для девочек</a></li>
             <li><a href="${pageContext.request.contextPath}/catalog?cat=newborn">Одежда для новороденных</a>
             </li>
-            <%--<li><a href="${pageContext.request.contextPath}/shop?page=catalog&cat=underwear">Нижнее белье</a></li>--%>
+
         </ul>
     </div>
 
@@ -22,15 +23,15 @@
     <div class="main-header">
         <p class="sort">Сортировать по:</p>
         <ul class="sort-ul">
-            <li><a href="#">цене</a></li>
-            <li><a href="#">популярности</a></li>
-            <li><a href="#">названию</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/sort?sort=priceAsc">цене(по возрастанию)</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/sort?sort=priceDesc">цене(по убыванию)</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/sort?sort=name">названию</a></li>
         </ul>
         <p class="limit">Показывать по:</p>
         <ul class="limit-ul">
-            <li><a href="#">10</a></li>
-            <li><a href="#">30</a></li>
-            <li><a href="#">50</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/size?size=6">6</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/size?size=12">12</a></li>
+            <li><a href="${pageContext.request.contextPath}/catalog/size?size=24">24</a></li>
         </ul>
         <span class="line-main"></span>
     </div>
@@ -57,9 +58,9 @@
 
     <div class="pagination">
         <ul>
-            <li><a href="#1">1</a></li>
-            <li><a href="#2">2</a></li>
-            <li><a href="#3">3</a></li>
+            <c:forEach var="page" items="${pages}">
+                <li><a href="${pageContext.request.contextPath}/catalog/page?page=${page}">${page}</a></li>
+            </c:forEach>
         </ul>
     </div>
 

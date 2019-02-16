@@ -5,9 +5,13 @@ import dao.repository.ProductRepository;
 import entities.Product;
 import entities.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import services.ProductService;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -54,7 +58,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public  List<Product> findByNameContaining(String name) {
+    public List<Product> findByNameContaining(String name) {
         return productRepository.findByNameContaining(name);
     }
 
@@ -68,7 +72,44 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findBySubcategory(subcategory);
     }
 
-    public List<ProductDto> getDto(Serializable orderId){
+    @Override
+    public List<ProductDto> getDto(Serializable orderId) {
         return productDao.getProductDto(orderId);
+    }
+
+    public List<Product> getPageProduct(int page, int size, String sort) {
+
+        if (sort != null && sort.equals("name")) {
+            return productRepository.findAll(PageRequest.of(page - 1, size, Sort.Direction.ASC, "name")).getContent();
+        }
+
+        if (sort != null && sort.equalsIgnoreCase("priceAsc")) {
+            return productRepository.findAll(PageRequest.of(page - 1, size, Sort.Direction.ASC, "price")).getContent();
+        }
+
+        if (sort != null && sort.equalsIgnoreCase("priceDesc")) {
+            return productRepository.findAll(PageRequest.of(page - 1, size, Sort.Direction.DESC, "price")).getContent();
+        }
+
+        return productRepository.findAll(PageRequest.of(page - 1, size)).getContent();
+
+    }
+
+    public List<Product> getPageProductBySubcategory(int page, int size, String sort, String subcategory) {
+
+        if (sort != null && sort.equals("name")) {
+            return productRepository.findAllBySubcategory(subcategory, PageRequest.of(page - 1, size, Sort.Direction.ASC, "name")).getContent();
+        }
+
+        if (sort != null && sort.equalsIgnoreCase("priceAsc")) {
+            return productRepository.findAllBySubcategory(subcategory, PageRequest.of(page - 1, size, Sort.Direction.ASC, "price")).getContent();
+        }
+
+        if (sort != null && sort.equalsIgnoreCase("priceDesc")) {
+            return productRepository.findAllBySubcategory(subcategory, PageRequest.of(page - 1, size, Sort.Direction.DESC, "price")).getContent();
+        }
+
+        return productRepository.findAllBySubcategory(subcategory, PageRequest.of(page - 1, size)).getContent();
+
     }
 }

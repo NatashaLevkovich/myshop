@@ -94,12 +94,18 @@ public class ServiceTest {
         itemService.delete(item);
     }
 
+    @Test
+    @Transactional
+    public void pageTest(){
+        productService.getPageProduct(0, 2, null).forEach(System.out::println);
+    }
+
     @After
     public void delete(){
         List<Item> items = itemService.getItemsByOrder(order);
         for (int i = 0; i < items.size(); i++){
             itemService.delete(items.get(i));
         }
-//        orderService.delete(order);
+ //       orderService.delete(order);
     }
 }
