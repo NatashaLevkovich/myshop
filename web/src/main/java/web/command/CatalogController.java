@@ -80,13 +80,16 @@ public class CatalogController {
 
     private void setPageCount(int productsSize, int size, ModelMap model) {
         int pageCount = productsSize / size;
+
         if (productsSize % size > 0) {
             pageCount += 1;
         }
+
         List<Integer> pages = new ArrayList<>();
         for (int i = 1; i <= pageCount; i++) {
             pages.add(i);
         }
+        
         model.put("pages", pages);
     }
 
