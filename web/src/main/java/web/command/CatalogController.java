@@ -89,7 +89,7 @@ public class CatalogController {
         for (int i = 1; i <= pageCount; i++) {
             pages.add(i);
         }
-        
+
         model.put("pages", pages);
     }
 
