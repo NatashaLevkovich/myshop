@@ -14,6 +14,7 @@ import services.ProductService;
 import services.UserService;
 import web.command.utils.CommandUtils;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +35,8 @@ public class ItemController {
     private UserService userService;
 
     @RequestMapping("/item")
-    public String addItem(ModelMap model, @RequestParam(value = "id") Long id, @RequestParam(value = "size") Integer size, @RequestParam(value = "quantity") Integer quantity) {
+    public String addItem(ModelMap model, @RequestParam(value = "id") Long id, @RequestParam(value = "size") Integer size,
+                          @RequestParam(value = "quantity") Integer quantity, HttpSession session) {
 
         Product product = productService.get(id);
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -49,7 +51,7 @@ public class ItemController {
             if (map.getKey() == size) {
                 maxQuantity = map.getValue();
                 if (map.getValue() < quantity) {
-                    model.put("error", "Недостаточно товара, в наличии " + map.getValue());
+                   session.setAttribute("error", "Недостаточно товара, в наличии " + map.getValue());
                     return "redirect:/product?id=" + product.getId();
                 }
             }
@@ -59,10 +61,10 @@ public class ItemController {
             try {
                 order = orderService.saveNewOrder(user, product, size, quantity);
             } catch (Exception e) {
-                model.put("error", "Ошибка создания заказа");
+                session.setAttribute("error", "Ошибка создания заказа");
                 return "redirect:/product?id=" + product.getId();
             }
-            model.put("items", 1);
+            session.setAttribute("items", 1);
             model.put("productinfo", product);
             return "redirect:/product?id=" + product.getId();
         } else {
@@ -74,20 +76,20 @@ public class ItemController {
                     try {
                         itemService.update(item);
                     } catch (Exception e) {
-                        model.put("error", "Недостаточно товара, в наличии " + maxQuantity);
+                        session.setAttribute("error", "Недостаточно товара, в наличии " + maxQuantity);
                         return "redirect:/product?id=" + product.getId();
                     }
-                    model.put("items", itemService.getItemsByOrder(order).size());
+                    session.setAttribute("items", itemService.getItemsByOrder(order).size());
                     model.put("productinfo", product);
                     return "redirect:/product?id=" + product.getId();
                 } else {
                     try {
                         itemService.saveNewItem(order, product, size, quantity);
                     } catch (Exception e) {
-                        model.put("error", "Ошибка создания заказа");
+                        session.setAttribute("error", "Ошибка создания заказа");
                         return "redirect:/product?id=" + product.getId();
                     }
-                    model.put("items", itemService.getItemsByOrder(order).size());
+                    session.setAttribute("items", itemService.getItemsByOrder(order).size());
                     model.put("productinfo", product);
                     return "redirect:/product?id=" + product.getId();
                 }

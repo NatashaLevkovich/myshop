@@ -15,6 +15,7 @@ import services.ProductService;
 import services.UserService;
 import web.command.utils.CommandUtils;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +36,8 @@ public class ShoppingBasketController {
 
 
     @RequestMapping("/shoppingbasket")
-    public String getBasket(ModelMap model, @RequestParam(value = "action", required = false) String action, @RequestParam(value = "id", required = false) Long id) {
+    public String getBasket(ModelMap model, @RequestParam(value = "action", required = false) String action,
+                            @RequestParam(value = "id", required = false) Long id, HttpSession session) {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = CommandUtils.getUserByAuth(auth, userService);
@@ -62,7 +64,7 @@ public class ShoppingBasketController {
                 return "basket";
             }
 
-            model.put("items", itemService.getItemsByOrder(order).size());
+            session.setAttribute("items", itemService.getItemsByOrder(order).size());
         }
 
         orders = orderService.getOrdersByUserAndStatus(user, "new");
