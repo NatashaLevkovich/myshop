@@ -15,9 +15,9 @@
     </c:forEach>
 
     <p>Выберите количество: </p>
-    <c:set var="error" value="${error}" scope="session"/>
+    <c:set var="error" value="${error}"/>
     <c:if test="${not empty error}">
-        <p>${error}</p>
+        <p style="color:red;">${error}</p>
     </c:if>
     <% session.removeAttribute("error"); %>
     <p><input type="number" min="1" step="1" name="quantity" required></p>

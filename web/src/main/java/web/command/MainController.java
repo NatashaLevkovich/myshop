@@ -15,7 +15,9 @@ import services.ItemService;
 import services.OrderService;
 import services.ProductService;
 import services.UserService;
+import web.command.utils.CommandUtils;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -34,19 +36,15 @@ public class MainController {
     private ItemService itemService;
 
     @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
-    public String getMainPage(ModelMap model) {
+    public String getMainPage(ModelMap model, HttpSession session) {
         model.put("products", productService.getAll());
         model.put("saleproducts", productService.getProductsByDiscount(0.2));
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            Object principal = auth.getPrincipal();
-            if (principal instanceof UserDetails) {
-                UserDetails userDetails = (UserDetails) principal;
-                User user = userService.getUserByEmail(userDetails.getUsername());
-                List<Order> orders = orderService.getOrdersByUserAndStatus(user, "new");
-                if (!orders.isEmpty()) {
-                    model.put("items", itemService.getItemsByOrder(orders.get(0)).size());
-                }
+        User user = CommandUtils.getUserByAuth(auth, userService);
+        if (user.getId() != null) {
+            List<Order> orders = orderService.getOrdersByUserAndStatus(user, "new");
+            if (!orders.isEmpty()) {
+                session.setAttribute("items", itemService.getItemsByOrder(orders.get(0)).size());
             }
         }
         return "main";
