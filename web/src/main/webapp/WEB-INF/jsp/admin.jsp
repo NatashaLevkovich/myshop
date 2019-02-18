@@ -3,78 +3,6 @@
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<div class="product-table">
-    <h1>Таблица товаров</h1>
-    <table class="product-table" border="1">
-        <tr>
-            <th width="10">ID</th>
-            <th>Название товара</th>
-            <th>Цена</th>
-            <th>Скидка</th>
-            <th>Категория</th>
-            <th>Подкатегория</th>
-            <th>Изображение</th>
-            <th>Производитель</th>
-            <th>Состав</th>
-            <th>Размеры</th>
-            <th>Количество</th>
-        </tr>
-
-        <c:forEach var="product" items="${products}">
-            <tr>
-                <td width="10">${product.id}</td>
-                <td>${product.name}</td>
-                <td>${product.price}</td>
-                <td>${product.discount}</td>
-                <td>${product.category}</td>
-                <td>${product.subcategory}</td>
-                <td>${product.image}</td>
-                <td>${product.manufacturer}</td>
-                <td>${product.material}</td>
-                <td>
-                    <table>
-                        <c:forEach var="size" items="${product.sizeAndQuantity}">
-                            <td>${size.key}</td>
-                        </c:forEach>
-                    </table>
-                </td>
-
-                <td>
-                    <table>
-                        <c:forEach var="size" items="${product.sizeAndQuantity}">
-                            <td>${size.value}</td>
-                        </c:forEach>
-                    </table>
-                </td>
-            </tr>
-        </c:forEach>
-
-
-        <%--@elvariable id="redproduct" type="entities"--%>
-        <s:form id="redactorproduct" action="${pageContext.request.contextPath}/admin/redactor" method="post"
-                modelAttribute="redproduct">
-
-            <tr class="redactor">
-                <td width="10"><s:input type="text" name="id" value="${redproduct.id}" path="id"/></td>
-                <td><s:input type="text" name="name" value="${redproduct.name}" path="name"/></td>
-                <td><s:input type="text" name="price" value="${redproduct.price}" path="price"/></td>
-                <td><s:input type="text" name="discount" value="${redproduct.discount}" path="discount"/></td>
-                <td><s:input type="text" name="category" value="${redproduct.category}" path="category"/></td>
-                <td><s:input type="text" name="subcategory" value="${redproduct.subcategory}" path="subcategory"/></td>
-                <td><s:input type="text" name="image" value="${redproduct.image}" path="image"/></td>
-                <td><s:input type="text" name="manufacturer" value="${redproduct.manufacturer}" path="manufacturer"/></td>
-                <td><s:input type="text" name="material" value="${redproduct.material}" path="material"/></td>
-                <td><input type="text" name="size"/></td>
-                <td><input type="text" name="quantity"/></td>
-                <td>
-                    <button form="redactorproduct">Редактировать/Добавить</button>
-                </td>
-            </tr>
-
-        </s:form>
-    </table>
-</div>
-
 <div class="order-table">
     <h1>Таблица заказов</h1>
     <table>
@@ -163,6 +91,78 @@
                     <button form="setuser">Редактировать/Добавить</button>
                 </td>
             </tr>
+        </s:form>
+    </table>
+</div>
+
+<div class="product-table">
+    <h1>Таблица товаров</h1>
+    <table class="product-table" border="1" style="border-collapse: collapse">
+        <tr>
+            <th width="10">ID</th>
+            <th>Название товара</th>
+            <th>Цена</th>
+            <th>Скидка</th>
+            <th>Категория</th>
+            <th>Подкатегория</th>
+            <th>Изображение</th>
+            <th>Производитель</th>
+            <th>Состав</th>
+            <th>Размеры</th>
+            <th>Количество</th>
+        </tr>
+
+        <c:forEach var="product" items="${products}">
+            <tr>
+                <td width="10">${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+                <td>${product.discount}</td>
+                <td>${product.category}</td>
+                <td>${product.subcategory}</td>
+                <td>${product.image}</td>
+                <td>${product.manufacturer}</td>
+                <td>${product.material}</td>
+                <td>
+                    <table>
+                        <c:forEach var="size" items="${product.sizeAndQuantity}">
+                            <td>${size.key}</td>
+                        </c:forEach>
+                    </table>
+                </td>
+
+                <td>
+                    <table>
+                        <c:forEach var="size" items="${product.sizeAndQuantity}">
+                            <td>${size.value}</td>
+                        </c:forEach>
+                    </table>
+                </td>
+            </tr>
+        </c:forEach>
+
+
+        <%--@elvariable id="redproduct" type="entities"--%>
+        <s:form id="redactorproduct" action="${pageContext.request.contextPath}/admin/redactor" method="post"
+                modelAttribute="redproduct">
+
+            <tr class="redactor">
+                <td width="10"><s:input type="text" name="id" value="${redproduct.id}" path="id"/></td>
+                <td><s:input type="text" name="name" value="${redproduct.name}" path="name"/></td>
+                <td><s:input type="text" name="price" value="${redproduct.price}" path="price"/></td>
+                <td><s:input type="text" name="discount" value="${redproduct.discount}" path="discount"/></td>
+                <td><s:input type="text" name="category" value="${redproduct.category}" path="category"/></td>
+                <td><s:input type="text" name="subcategory" value="${redproduct.subcategory}" path="subcategory"/></td>
+                <td><s:input type="text" name="image" value="${redproduct.image}" path="image"/></td>
+                <td><s:input type="text" name="manufacturer" value="${redproduct.manufacturer}" path="manufacturer"/></td>
+                <td><s:input type="text" name="material" value="${redproduct.material}" path="material"/></td>
+                <td><input type="text" name="size"/></td>
+                <td><input type="text" name="quantity"/></td>
+                <td>
+                    <button form="redactorproduct">Редактировать/Добавить</button>
+                </td>
+            </tr>
+
         </s:form>
     </table>
 </div>

@@ -259,11 +259,15 @@ a {
 }
 
 .button-search {
+    color: white;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-weight: 400;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(219, 157, 57);
+    background-color: rgb(244, 201, 65);
+    border-color: rgba(219, 157, 57, 0.8);
     border-radius: 4px;
-    opacity: 0.8;
     position: absolute;
     left: 200px;
     top: 0px;
@@ -276,7 +280,6 @@ a {
     font-size: 12px;
     font-family: "OpenSans";
     color: rgba(0, 0, 0, 0.6);
-    line-height: 1.2;
     text-align: left;
     position: absolute;
     left: 10px;
@@ -289,9 +292,8 @@ a {
 .search {
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 2px;
-    opacity: 0.14;
+    border-color: rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
     position: absolute;
     left: 452px;
     top: 18px;

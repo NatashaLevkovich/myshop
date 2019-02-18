@@ -26,8 +26,8 @@ public class ProductDto {
     public String toString() {
         return "Название: " + name +
                 ", цена: " + price +
-                ", скидка: " + discount +
-                ", размер: " + size +
+                ", скидка: " + discount*100 +
+                "% , размер: " + size +
                 ", количество: " + quantity + "\n";
     }
 }
