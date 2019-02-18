@@ -4,6 +4,7 @@
     <c:set var="reg" scope="request" value="${registration}"/>
     <c:out value="${reg}"/>
     <h2>Добро пожаловать!</h2>
+    <p style="color:red;">${error}</p>
     <form id="login-form" action="${pageContext.request.contextPath}/login" method="post">
         <p>E-mail</p>
         <c:if test="${param.error != null}">
