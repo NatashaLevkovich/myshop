@@ -22,9 +22,6 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    private OrderJpaRepository orderJpaRepository;
-
-    @Autowired
     private ProductRepository productRepository;
 
     @Override

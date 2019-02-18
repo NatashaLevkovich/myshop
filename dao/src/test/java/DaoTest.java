@@ -27,9 +27,6 @@ import java.util.Map;
 public class DaoTest {
 
     @Autowired
-    private ProductDao productDao;
-
-    @Autowired
     private OrderJpaRepository orderJpaRepository;
 
     @Autowired
