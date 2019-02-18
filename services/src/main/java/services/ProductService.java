@@ -1,5 +1,6 @@
 package services;
 
+import entities.Order;
 import entities.Product;
 import entities.ProductDto;
 import java.io.Serializable;
@@ -17,7 +18,7 @@ public interface ProductService extends BaseService<Product>{
 
     List<Product> getProductsByDiscount(double discount);
 
-    List<ProductDto> getDto(Serializable orderId);
+    List<ProductDto> getDto(Order order);
 
     List<Product> getPageProduct(int page, int size, String sort);
 

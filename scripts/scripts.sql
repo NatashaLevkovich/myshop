@@ -85,8 +85,8 @@ INSERT INTO user (id, address, email, firstName, lastName, password, phoneNumber
 INSERT INTO user (id, address, email, firstName, lastName, password, phoneNumber, status) VALUES (5, '', '12@mail.com', 'Nata', '', '$2a$10$ttnvmDGIUfdNLDHClRqAZuU1YOEszzOHlhVm.y./MVWLaDILwzJSe', '', 'USER');
 
 INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (3, '', 0.3, 'assets/image/products/bg.jpg', '', '', 'джинсы', 5, 'BOYS');
-INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (4, 'CLOTHES', 0, 'assets/image/products/bg.jpg', null, null, 'майка белая', 4.25, 'girls');
-INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (5, 'CLOTHES', 0, 'assets/image/products/bg.jpg', null, null, 'комплект', 9.99, 'newborn');
+INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (4, 'new', 0, 'assets/image/products/bg.jpg', null, null, 'майка белая', 4.25, 'girls');
+INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (5, 'new', 0, 'assets/image/products/bg.jpg', null, null, 'комплект', 9.99, 'newborn');
 INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (6, 'CLOTHES', 0.3, 'assets/image/products/bg.jpg', null, null, 'майка для девочки', 4.5, 'girls');
 INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (7, 'CLOTHES', 0.3, 'assets/image/products/bg.jpg', null, null, 'майка для мальчика', 5, 'boys');
 INSERT INTO product (id, category, discount, image, manufacturer, material, name, price, subcategory) VALUES (8, '', 0.3, 'assets/image/products/bg.jpg', '', '', 'джинсы', 10, 'NEWBORN');

@@ -12,15 +12,15 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDto {
-    private Long itemId;
     private String name;
     private Double price;
-    private Double discount;
     private String image;
     private String manufacturer;
     private String material;
     private Integer size;
     private Integer quantity;
+    private Double discount;
+    private Long itemId;
 
     @Override
     public String toString() {

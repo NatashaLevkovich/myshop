@@ -43,7 +43,7 @@ public class OrdersController {
         Map<Long, List<ProductDto>> map = new HashMap<>();
         model.put("orders", orders);
         for (Order o : orders) {
-            map.put(o.getId(), productService.getDto(o.getId()));
+            map.put(o.getId(), productService.getDto(o));
         }
         model.put("productDto", map);
         return "orders";

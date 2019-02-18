@@ -84,6 +84,7 @@ public class ServiceTest {
         System.out.println(itemService.getItemsByOrder(order));
         List<Product> products = productService.findByNameContaining("майка");
         products.forEach(System.out::println);
+        productService.getDto(order).forEach(System.out::println);
         User newUser = userService.getUserByEmail("e@mail.com");
         Order newOrder = orderService.get(order.getId());
         int listSize = newOrder.getItems().size();

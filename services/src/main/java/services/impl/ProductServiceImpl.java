@@ -1,7 +1,9 @@
 package services.impl;
 
 import dao.ProductDao;
+import dao.repository.OrderJpaRepository;
 import dao.repository.ProductRepository;
+import entities.Order;
 import entities.Product;
 import entities.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +22,10 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    private ProductRepository productRepository;
+    private OrderJpaRepository orderJpaRepository;
 
     @Autowired
-    private ProductDao productDao;
+    private ProductRepository productRepository;
 
     @Override
     public Product save(Product product) {
@@ -73,8 +75,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductDto> getDto(Serializable orderId) {
-        return productDao.getProductDto(orderId);
+    public List<ProductDto> getDto(Order order) {
+        return productRepository.getProductDto(order);
     }
 
     public List<Product> getPageProduct(int page, int size, String sort) {

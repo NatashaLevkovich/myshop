@@ -70,14 +70,17 @@ public class ShoppingBasketController {
         orders = orderService.getOrdersByUserAndStatus(user, "new");
         if (!orders.isEmpty()) {
             order = orders.get(0);
+            List<ProductDto> productDtoList = productService.getDto(order);
+            if (productDtoList != null) {
+                model.put("productDto", productDtoList);
+            } else {
+                orderService.delete(order);
+            }
+        } else {
+            order = new Order();
         }
         model.put("order", order);
-        List<ProductDto> productDtoList = productService.getDto(order.getId());
-        if (productDtoList.size() > 0) {
-            model.put("productDto", productDtoList);
-        } else {
-            orderService.delete(order);
-        }
         return "basket";
     }
+
 }
