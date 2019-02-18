@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController {
 
     @RequestMapping(value = "/login")
-    public String login(ModelMap modelMap) {
+    public String login(ModelMap model) {
         return "login";
     }
 
@@ -28,4 +28,9 @@ public class LoginController {
         return "main";
     }
 
+    @RequestMapping(value = "/access_denied")
+    public String accessDenied(ModelMap model) {
+        model.put("error", "Неверно введен e-mail или пароль");
+        return "login";
+    }
 }
