@@ -1,13 +1,10 @@
 package services.impl;
 
-import dao.ProductDao;
-import dao.repository.OrderJpaRepository;
 import dao.repository.ProductRepository;
 import entities.Order;
 import entities.Product;
 import entities.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
