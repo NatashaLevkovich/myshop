@@ -276,10 +276,10 @@ a {
     z-index: 164;
 }
 
-#search {
+#search{
     font-size: 12px;
     font-family: "OpenSans";
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.14);
     text-align: left;
     position: absolute;
     left: 10px;
