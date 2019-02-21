@@ -29,7 +29,6 @@ public class ItemServiceImpl implements ItemService {
     private OrderService orderService;
 
     @Override
-    @Transactional
     public Item saveNewItem(Order order, Product product, int productSize, int quantity) throws Exception {
         Map<Integer, Integer> sizes = updateQuantity(product, productSize, quantity);
         product.setSizeAndQuantity(sizes);
@@ -54,7 +53,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public Item update(Item item) throws Exception {
         Item savedItem = itemRepository.getOne(item.getId());
         int quantity = item.getQuantity() - savedItem.getQuantity();
@@ -77,7 +75,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public void delete(Item item) {
         itemRepository.deleteById(item.getId());
         try {

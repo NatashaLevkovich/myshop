@@ -25,7 +25,6 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private ItemRepository itemRepository;
 
-    @Transactional
     public Order saveNewOrder(User user, Product product, int productSize, int quantity) throws Exception{
         Order order = new Order();
         order.setOrderDate(Calendar.getInstance());
