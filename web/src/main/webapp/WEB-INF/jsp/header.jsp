@@ -18,9 +18,9 @@
         </div>
 
         <div class="search">
-            <form id="search" action="${pageContext.request.contextPath}/catalog/search"><input type="search" name="search"/>">
+            <form id="search" action="${pageContext.request.contextPath}/catalog/search"><input type="search" name="search"/>
             </form>
-            <button form="search" class="button-search" src="${pageContext.request.contextPath}/assets/image/baseline_search_black_18dp.png" ><spring:message code="header.search"/></button>
+            <button form="search" class="button-search" src="${pageContext.request.contextPath}/assets/image/baseline_search_black_18dp.png"><spring:message code="header.search"/></button>
         </div>
 
 

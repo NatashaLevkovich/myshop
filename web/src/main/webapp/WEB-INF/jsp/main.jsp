@@ -35,7 +35,7 @@
     <div class="sale">
 
         <c:set var="count" value="0"/>
-        <c:forEach var="saleproduct" items="${saleproducts}" varStatus="status">
+        <c:forEach var="saleproduct" items="${saleproducts}" varStatus="status" end="3">
                 <div class="product-box-sale">
                     <img src="${saleproduct.image}">
                     <h3><a href="${pageContext.request.contextPath}/product?id=${saleproduct.id}">${saleproduct.name}</a></h3>

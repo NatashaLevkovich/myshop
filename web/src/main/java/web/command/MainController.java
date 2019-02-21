@@ -37,7 +37,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
     public String getMainPage(ModelMap model, HttpSession session) {
-        model.put("products", productService.getAll());
+        model.put("products", productService.getProductsByCategory("new"));
         model.put("saleproducts", productService.getProductsByDiscount(0.2));
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = CommandUtils.getUserByAuth(auth, userService);

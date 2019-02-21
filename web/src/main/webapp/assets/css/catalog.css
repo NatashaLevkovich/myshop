@@ -90,7 +90,7 @@ li {
 .limit-ul li {
     position: relative;
     display: inline;
-    left: 540px;
+    left: 430px;
     margin-right: 10px;
     width: 38px;
     height: 12px;
@@ -171,8 +171,6 @@ li {
     left: 310px;
     top: -110px;
     columns: 3;
-
-
 }
 
 .product-box-s {
@@ -259,7 +257,6 @@ li {
 
 }
 
-
 .product-box-s .buy {
     border-radius: 4px;
     background-color: rgb(219, 157, 57);
@@ -270,7 +267,6 @@ li {
     height: 42px;
 
 }
-
 
 .pagination {
     position: relative;

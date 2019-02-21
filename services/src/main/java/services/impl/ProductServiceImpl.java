@@ -1,11 +1,10 @@
 package services.impl;
 
-import dao.ProductDao;
 import dao.repository.ProductRepository;
+import entities.Order;
 import entities.Product;
 import entities.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -21,9 +20,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
-
-    @Autowired
-    private ProductDao productDao;
 
     @Override
     public Product save(Product product) {
@@ -73,8 +69,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductDto> getDto(Serializable orderId) {
-        return productDao.getProductDto(orderId);
+    public List<ProductDto> getDto(Order order) {
+        return productRepository.getProductDto(order);
     }
 
     public List<Product> getPageProduct(int page, int size, String sort) {

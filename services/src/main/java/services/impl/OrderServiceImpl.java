@@ -1,20 +1,15 @@
 package services.impl;
 
-import dao.*;
-import dao.impl.*;
+
 import dao.repository.ItemRepository;
 import dao.repository.OrderJpaRepository;
 import dao.repository.ProductRepository;
-import dao.repository.UserRepository;
 import entities.*;
-import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import services.OrderService;
-
 import java.io.Serializable;
-import java.sql.SQLException;
 import java.util.*;
 
 @Service

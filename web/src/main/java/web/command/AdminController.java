@@ -217,7 +217,7 @@ public class AdminController {
                         fw.write("тел.: " + u.getPhoneNumber() + "\n");
                     }
                 }
-                for (ProductDto dto : productService.getDto(o.getId())) {
+                for (ProductDto dto : productService.getDto(o)) {
                     fw.write(dto.toString());
                 }
                 fw.flush();

@@ -1,4 +1,3 @@
-import dao.ProductDao;
 import dao.repository.*;
 import entities.*;
 import org.junit.Before;
@@ -25,9 +24,6 @@ import java.util.Map;
 @ContextConfiguration("/test-context.xml")
 @Rollback(false)
 public class DaoTest {
-
-    @Autowired
-    private ProductDao productDao;
 
     @Autowired
     private OrderJpaRepository orderJpaRepository;
@@ -98,8 +94,7 @@ public class DaoTest {
         System.out.println(items.get(0));
         orderJpaRepository.findByUser(user).forEach(System.out::println);
         System.out.println(orderJpaRepository.findOne(Example.of(new Order(null, null, null, null, "new", null))));
-        productDao.getProductDto(order.getId()).forEach(System.out::println);
-        productRepository.findAll().forEach(System.out::println);
+        productRepository.getProductDto(order).forEach(System.out::println);
     }
 
     @Test
